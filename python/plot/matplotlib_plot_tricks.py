@@ -26,3 +26,13 @@ plt.legend(handles=[red_patch,blue_patch])
 red_line= mlines.Line2D([], [], color='red', label="chargeoff")
 blue_line = mlines.Line2D([], [], color='blue', label="fullypaid")
 plt.legend(handles=[red_line,blue_line])
+
+
+
+#corrplot with seaborn
+import seaborn as sns
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+plt.figure(figsize=(15,15))
+sns.heatmap(data.corr(),annot=False, vmax=1,vmin=-1, square=True, cmap="RdBu")
